@@ -5,10 +5,10 @@
 <% else %>
   <div id ='api2'>
 <% end %>
-
+<h3 style='text-align: center;'>Search below to add a <br />game to our database from IGDB:</h3>
   <p>
    <%= form_tag(api_index_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search IGDB Database" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Internet Game Database (IGDB)" %>
       <div class='text-center'><%= submit_tag "Search", :name => nil%> </div>
       <br />
    <% end %>
@@ -54,9 +54,9 @@
         <% end %>
       </div>
     <% end %>
-    
+
     <div class='text-center'>
-      <h3>Don't see the game you want?</h3>
+      <h4>Don't see the game you want?<br />You can send a request to our admin staff <br />to add a game of your choice to our database:</h4>
       <%= button_to "Request a Game", new_gamerequest_path, method: :get %>
       <br />
     </div>

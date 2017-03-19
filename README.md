@@ -6,3 +6,5 @@ A rails app that allows users to search for games and review games. A user can s
 ![Build Status](https://codeship.com/projects/42a56450-bf10-0134-11d8-0ef15c5d34cb/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/wwinslowkent/review-site.png)
 ![Coverage Status](https://coveralls.io/repos/wwinslowkent/review-site/badge.png)
+
+![Alt Text](https://github.com/tscalzo000/review-site/blob/master/galaxygamersreview.gif)

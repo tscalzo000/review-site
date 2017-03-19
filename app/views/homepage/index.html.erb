@@ -3,7 +3,7 @@
 <% else %>
   <div id='homepage'>
 <% end %>
-
+<h3 style='text-align: center;'>Welcome to Galaxy Gamers Game Reviews. <br /> To begin, search for a game to review below:</h3>
   <p>
     <%= form_tag(games_path, :method => "get", id: "search-form") do %>
        <%= text_field_tag :search, params[:search], placeholder: "Search Games" %>
