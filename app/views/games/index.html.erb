@@ -1,6 +1,7 @@
 <% if @games.blank? %>
   <div id='index'>
-    <h4>There are no games containing the term <%= params[:search] %>.</h4>
+    <h4>There are no games containing the term <%= params[:search] %>.</h4><br />
+    <h3 style='text-align: center;'>Don't see the game you want? <br />You can search the Internet Game Database <br />to add a game to our database that we don't have.</h3>
     <%= button_to "Add a Game from IGDB", api_index_path, method: :get %>
   </div>
 <% else %>
@@ -19,7 +20,7 @@
     <% end %>
     <br />
     <div class='text-center'>
-      <h3>Don't see the game you want?</h3>
+      <h3 style='text-align: center;'>Don't see the game you want? <br />You can search the Internet Game Database <br />to add a game to our database that we don't have.</h3>
       <%= button_to "Add a Game from IGDB", api_index_path, method: :get, id: 'igdb' %>
       <br />
     </div>
