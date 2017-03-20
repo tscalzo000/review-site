@@ -7,8 +7,10 @@
     </div>
 
     <div class="title-bar-right">
-
+      <%= link_to 'Usage', '/usage' %> |
         <% if user_signed_in? %>
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method:  :delete, :class => 'navbar-link'  %> |
           Logged in as <strong><%= link_to current_user.name, user_path(current_user) %></strong>.
           <% if current_user.profile_photo? %>
             <%= image_tag current_user.profile_photo, id: 'profile' %>
@@ -16,12 +18,10 @@
             <%= image_tag 'man.png', id: 'profile' %>
 
             <% end %>
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method:  :delete, :class => 'navbar-link'  %>
         <% elsif admin_signed_in? %>
-          Logged in as Admin: <strong><%= current_admin.email %></strong>. |
           <%= link_to "Dashboard", admins_path %> |
-          <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+          <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %> |
+          Logged in as Admin: <strong><%= current_admin.email %></strong>.
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
