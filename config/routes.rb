@@ -21,9 +21,7 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :api, only: [:index]
-
 
   devise_for :admins
   resources :admins, only: [:index]
@@ -37,5 +35,7 @@ Rails.application.routes.draw do
 
   resources :gamerequests
 
-  resources :splash
+  resources :splash, only: [:index]
+
+  resources :usage, only: [:index]
 end

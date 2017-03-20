@@ -1,0 +1,18 @@
+<div id='pad' class='text-center'>
+  <br />
+  <a><h2 class="popup" data-link="https://www.youtube.com/embed/S3agGahfMOQ" data-title="Screencast">How to Use This Site: Video Tutorial</h2></a>
+
+  <div id="video-view">
+  </div>
+</div>
+
+
+<script>
+  $(".popup").click(function () {
+    var $this = $(this);
+    var $iframe = $("<iframe>").attr("src", $this.data("link")).css({"width": 600, "height": 400});
+    var $title = $("<h3>").text($this.data("title"));
+    $("#video-view").html($title).append($iframe);
+    $iframe.wrap("<div class='class-video'>");
+  });
+</script>
